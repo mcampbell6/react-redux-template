@@ -3,9 +3,9 @@ import {updateFormQuestion, submitForm} from '../actions/FormActions';
 
 const mapStateToProps = (state) => {
     return {
-        questions: state.questions.questions,
-        questionLoadError: state.questions.error,
-        loading: state.questions.loading
+        questions: state.form.questions,
+        questionLoadError: state.form.error,
+        loading: state.form.loading
     }
 };
 

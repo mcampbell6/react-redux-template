@@ -1,7 +1,7 @@
 export default {
     getQuestions() {
-        return ({
-            1: {
+        return ([
+            {
                 type: "radio",
                 text: "Do you understand how this works",
                 name: "understanding",
@@ -11,12 +11,12 @@ export default {
                     {value: "F", display: "No not at all."}
                 ]
             },
-            firstNameId: {
+            {
                 type: "text",
                 text: "What is your first name?",
                 name: "firstName",
                 required: true
             }
-        })
+      ])
     }
 }

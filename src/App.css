@@ -1,27 +1,15 @@
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+
+
+.App {
+  background: #d3d3d3;
+  height: 100vh;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-  text-align: center;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.radio-question, .text-question {
-  margin: 15px;
+.app-header{
+  padding-top: 20px;
+  padding-left: 20px;
+  font-weight: 600;
+  font-style: bold;
 }
 
 .question-header {

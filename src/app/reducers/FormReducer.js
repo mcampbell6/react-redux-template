@@ -29,6 +29,8 @@ export default function questionReducer(state = initState, action) {
         {
             return state = {
                 ...state,
+                loading: false,
+                loaded: false,
                 error: action.payload
             };
         }

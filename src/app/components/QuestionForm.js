@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import TextQuestion from './TextQuestion';
 import mount from '../containers/FormContainer';
+import './QuestionForm.css';
 
 export class QuestionForm extends Component {
     constructor(props) {
@@ -10,26 +11,33 @@ export class QuestionForm extends Component {
     }
 
     render() {
-        if (this.props.loading) {
-            return null
-        }
         if (this.props.questionLoadError) {
-            return "there was an error loading "
+            return (
+              <div className="question-form">
+              {this.showLoadingText()}
+                <h1>There seems to have been an error. Here is the response from the server </h1>
+                <br/>
+                {this.props.questionLoadError.message}
+              </div>
+            )
         }
 
         return (
+          <div className="question-form">
+            {this.showLoadingText()}
             <form name="questionForm" onSubmit={this.handleSubmit}>
-                <h1>form, yo</h1>
-                <TextQuestion />
-                {this.checkError()}
+                <TextQuestion question={this.props.questions[0]} onChange={this.handleChange}/>
+                <br/>
+                <TextQuestion question={this.props.questions[1]} onChange={this.handleChange}/>
             </form>
+          </div>
         )
     }
 
-    checkError() {
-        if (this.props.error) {
-            return "This is an error message";
-        }
+    showLoadingText() {
+      if (this.props.loading) {
+          return (<h1>The app is loading!!</h1>)
+      }
     }
 
     handleChange(event) {
