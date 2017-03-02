@@ -1,0 +1,2 @@
+export const QUESTION_API = 'EVENTUAL/API/ROUTE/1';
+export const SUBMIT_API = 'EVENTUAL/API/ROUTE/2';
